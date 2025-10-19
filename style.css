@@ -1,13 +1,27 @@
 body {
   background-color: grey;
-}
 
+
+.box {
+  background-color: black;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
 .main-title {
   font-size:80px;
   font-weight: 1000;
   color: white;
-  background-color: black;
-  text-align: center;
   font-family:"Do Hyeon", sans-serif;
 }
 
+.main-subject {
+  font-size:40px;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family:"Do Hyeon", sans-serif;
+}
