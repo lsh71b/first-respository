@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>안녕하세요, <span id="name">홍길동</span>입니다 👋</h1>
+    <h1>안녕하세요, <span id="name">홍길동</span>입니다 <span id="wave">👋</span></h1>
     <p class="sub" id="oneLine">사용자 중심의 결과물을 만드는 것을 좋아하는 웹 개발자 지망생입니다.</p>
 
     <div class="row">
@@ -58,6 +58,10 @@
   </div>
 
   <script>
+
+    $('#wave').on('click', function() {
+      alert('반가워요!');
+    })
     $(function () {
       // 상세 보기 토글
       $('#toggleMore').on('click', function () {
