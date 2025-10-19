@@ -1,0 +1,95 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>간단 자기소개</title>
+
+
+  <!-- 외부 CSS 연결 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>안녕하세요, <span id="name">홍길동</span>입니다 👋</h1>
+    <p class="sub" id="oneLine">사용자 중심의 결과물을 만드는 것을 좋아하는 웹 개발자 지망생입니다.</p>
+
+    <div class="row">
+      <button id="toggleMore">상세 보기</button>
+      <button id="themeBtn">다크모드</button>
+      <button class="primary" id="contactBtn">연락하기</button>
+    </div>
+
+    <div id="more" class="hidden">
+      <div class="divider"></div>
+      <h3>기본 정보</h3>
+      <ul>
+        <li><b>관심사:</b> 프론트엔드, 알고리즘, 법·경영 융합</li>
+        <li><b>목표:</b> 사용성이 좋은 웹 서비스 만들기</li>
+        <li><b>거주지:</b> 서울</li>
+      </ul>
+
+      <h3>스킬</h3>
+      <div class="row">
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">jQuery</span>
+        <span class="tag">Python</span>
+      </div>
+
+      <h3>링크</h3>
+      <p>
+        • GitHub: <a class="link" href="#" id="gh" target="_blank" rel="noopener">준비 중</a><br/>
+        • 블로그: <a class="link" href="#" id="blog" target="_blank" rel="noopener">준비 중</a>
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <div class="label">한줄 소개 수정</div>
+      <div class="row">
+        <input type="text" id="introInput" placeholder="예) 문제 해결을 사랑하는 개발자!"/>
+        <button id="applyIntro">적용</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      // 상세 보기 토글
+      $('#toggleMore').on('click', function () {
+        $('#more').slideToggle(180);
+        $(this).text($('#more').is(':visible') ? '접기' : '상세 보기');
+      });
+
+      // 다크모드 토글
+      let dark = false;
+      $('#themeBtn').on('click', function () {
+        dark = !dark;
+        $('html, body').toggleClass('dark', dark);
+        $(this).text(dark ? '라이트모드' : '다크모드');
+      });
+
+      // 연락하기 버튼
+      $('#contactBtn').on('click', function () {
+        alert('이메일: you@example.com\n연락 환영합니다!');
+      });
+
+      // 한줄 소개 수정
+      $('#applyIntro').on('click', function () {
+        const txt = $('#introInput').val().trim();
+        if (!txt) {
+          alert('한줄 소개를 입력해 주세요!');
+          $('#introInput').focus();
+          return;
+        }
+        $('#oneLine').hide().text(txt).fadeIn(140);
+        $('#introInput').val('');
+      });
+    });
+  </script>
+</body>
+</html>
