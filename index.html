@@ -62,12 +62,15 @@
     $('#wave').on('click', function() {
       alert('반가워요!');
     })
-    $(function () {
-      // 상세 보기 토글
-      $('#toggleMore').on('click', function () {
-        $('#more').slideToggle(180);
-        $(this).text($('#more').is(':visible') ? '접기' : '상세 보기');
-      });
+
+
+  $('#toggleMore').on('click', function () {
+  const $btn = $(this);
+  $('#more').slideToggle(180, function () {           // 콜백에서 최종 상태 확인
+    $btn.text($(this).is(':visible') ? '접기' : '상세 보기');
+  });
+});
+
 
       // 다크모드 토글
       let dark = false;
@@ -93,7 +96,7 @@
         $('#oneLine').hide().text(txt).fadeIn(140);
         $('#introInput').val('');
       });
-    });
+    
   </script>
 </body>
 </html>
