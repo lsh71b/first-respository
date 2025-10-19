@@ -1,128 +1,13 @@
-
-:root {
-  --bg: #f9fafb;
-  --fg: #111827;
-  --sub: #6b7280;
-  --card: #ffffff;
-  --accent: #2563eb;
-  --bd: #e5e7eb;
-}
-
-.dark {
-  --bg: #0b1020;
-  --fg: #e5e7eb;
-  --sub: #a1a1aa;
-  --card: #0f172a;
-  --accent: #60a5fa;
-  --bd: #1f2937;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 40px 20px;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans KR', sans-serif;
+  background-color: grey;
 }
 
-.wrap {
-  max-width: 720px;
-  margin: 0 auto;
-  background: var(--card);
-  border: 1px solid var(--bd);
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-}
-
-h1 {
-  margin: 0 0 8px;
-  font-size: 28px;
-}
-
-p.sub {
-  margin: 0 0 20px;
-  color: var(--sub);
-}
-
-.row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 18px 0;
-}
-
-button,
-.btn {
-  border: 1px solid var(--bd);
-  background: #fff0;
-  color: var(--fg);
-  padding: 8px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.04s ease, background 0.2s, border-color 0.2s;
-}
-
-button:hover {
-  border-color: var(--accent);
-}
-
-button:active {
-  transform: translateY(1px);
-}
-
-.primary {
-  background: var(--accent);
+.main-title {
+  font-size:80px;
+  font-weight: 1000;
   color: white;
-  border-color: var(--accent);
+  background-color: black;
+  text-align: center;
+  font-family:"Do Hyeon", sans-serif;
 }
 
-.tag {
-  display: inline-block;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px dashed var(--bd);
-  color: var(--sub);
-  font-size: 14px;
-}
-
-.divider {
-  height: 1px;
-  background: var(--bd);
-  margin: 18px 0;
-}
-
-.hidden {
-  display: none;
-}
-
-.label {
-  font-size: 14px;
-  color: var(--sub);
-  margin-bottom: 6px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--bd);
-  border-radius: 10px;
-  background: transparent;
-  color: var(--fg);
-  outline: none;
-}
-
-a.link {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a.link:hover {
-  text-decoration: underline;
-}
