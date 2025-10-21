@@ -1,8 +1,10 @@
 body {
   background-color: grey;
-
+}
 
 .box {
+  width: auto;
+  height: auto;
   background-color: black;
   padding: 20px;
   margin: 20px;
@@ -18,10 +20,56 @@ body {
 }
 
 .main-subject {
-  font-size:40px;
+  font-size:20px;
   font-weight: 700;
   background-color: black;
   color: white;
   text-align: center;
+  font-family:"Do Hyeon", sans-serif;
+}
+
+.btn {
+  background: linear-gradient(135deg, silver, black);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  filter: brightness(1.15);
+  transform: scale(1.05);
+}
+
+.box2 {
+  width: auto;
+  height: auto;
+  background-color: black;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;                 /* 좌우 배치 */
+  justify-content: space-between;/* 양쪽으로 벌리기 */
+  gap: 20px;                     /* 사이 여백 */
+}
+
+/* 안쪽 박스들 */
+.section {
+  flex: 1;                       /* 동일한 너비 */
+  background: silver;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  color: black;
+}
+
+.content {
+  color: black;
   font-family:"Do Hyeon", sans-serif;
 }
