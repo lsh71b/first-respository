@@ -3,15 +3,16 @@ body {
 }
 
 .box {
-  width: auto;
-  height: auto;
+  width: 1200px;
+  height: 300px;
   background-color: black;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;  /* 가로 자동 정렬 */
   color: white;
   border-radius: 10px;
   text-align: center;
 }
+
 .main-title {
   font-size:80px;
   font-weight: 1000;
@@ -20,7 +21,7 @@ body {
 }
 
 .main-subject {
-  font-size:20px;
+  font-size:30px;
   font-weight: 700;
   background-color: black;
   color: white;
@@ -46,11 +47,11 @@ body {
 }
 
 .box2 {
-  width: auto;
+  width: 1200px;
   height: auto;
   background-color: black;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;  /* 가로 자동 정렬 */
   color: white;
   border-radius: 10px;
   text-align: center;
@@ -70,6 +71,7 @@ body {
 }
 
 .content {
+  font-size: 30px;
   color: black;
   font-family:"Do Hyeon", sans-serif;
 }
