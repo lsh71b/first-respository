@@ -33,11 +33,16 @@
   </div>
 </div>
 
-<div class='box'>
-  <h3 class="sub-subject">
-    <p>email</p>
-    <p>phone</p>
-  </h3>
+<!-- 간단 곱셈 계산기 -->
+<div class="card calc">
+  <h2>간단 곱셈 계산기</h2>
+  <div class="calc-row">
+    <input id="num1" type="number" placeholder="숫자 1 입력" />
+    <span class="x-sign">×</span>
+    <input id="num2" type="number" placeholder="숫자 2 입력" />
+    <button id="calc-btn" type="button">=</button>
+  </div>
+  <div id="calc-result">결과: —</div>
 </div>
 
 
@@ -46,8 +51,18 @@
 <button class="btn">button</button>
 
 </body>
+
+
 <script>
   $('.btn').on('click', function() {
   alert()
   })
 </script>
+
+<script>
+  $('#calc-btn').on('click', function() {
+    const num1 = Number($('#num1').val());
+    const num2 = Number($('#num2').val());
+    const result = num1 * num2;
+    $('#calc-result').text('결과: ' + result);
+  });
