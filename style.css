@@ -78,14 +78,16 @@ body {
 
 
 .card.calc {
-  background: #161a22;
+  background: #000000;
   border-radius: 14px;
   padding: 18px;
-  color: #eaeaea;
+  color: #ffffff;
   box-shadow: 0 8px 24px rgba(0,0,0,.25);
   max-width: 520px;
   margin: 20px auto;
   text-align: center;
+  font-size: 30px;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .card.calc h2 {
@@ -107,8 +109,8 @@ body {
   padding: 0 8px;
   border: 1px solid #2a2f3a;
   border-radius: 10px;
-  background: #0f1115;
-  color: #eaeaea;
+  background: #ffffff;
+  color: #000000;
   font-size: 15px;
   text-align: center;
 }
@@ -126,12 +128,14 @@ body {
 }
 
 #calc-btn {
+  font-family: "Do Hyeon", sans-serif;
   height: 42px;
   padding: 0 14px;
   border: 0;
   border-radius: 10px;
-  background: #4dabf7;
-  color: #0b1220;
+  background: linear-gradient(135deg, silver, black);
+  color: #ffffff;
+  font-size: 20px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -140,7 +144,7 @@ body {
 #calc-btn:active { transform: translateY(1px); }
 
 #calc-result {
+  font-size: 20px;
   margin-top: 10px;
-  font-size: 15px;
-  color: #cfd6df;
+  color: white;
 }
