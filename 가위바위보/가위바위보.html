@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>3인 가위바위보</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <h1>✊✋✌️ 3인 가위바위보</h1>
+
+    <div class="triangle" id="triangle">
+      <div class="overlay" id="overlay"><div class="count" id="count">3</div></div>
+
+      <div class="card" id="p1">
+        <div class="tag">플레이어</div>
+        <div class="name">나</div>
+        <div class="hand" id="p1-hand">❔</div>
+        <div class="label" id="p1-label">선택 대기</div>
+      </div>
+      <div class="card" id="p2">
+        <div class="tag">CPU</div>
+        <div class="name">컴A</div>
+        <div class="hand" id="p2-hand">❔</div>
+        <div class="label" id="p2-label">선택 잠금됨</div>
+      </div>
+      <div class="card" id="p3">
+        <div class="tag">CPU</div>
+        <div class="name">컴B</div>
+        <div class="hand" id="p3-hand">❔</div>
+        <div class="label" id="p3-label">선택 잠금됨</div>
+      </div>
+    </div>
+
+    <div class="hud">
+      <div class="choice-group" id="choiceGroup">
+        <button class="btn choice" data-choice="가위" id="찌">✌️</button>
+        <button class="btn choice" data-choice="바위" id="묵">✊</button>
+        <button class="btn choice" data-choice="보" id = "빠">✋</button>
+        <button class="btn choice" data-choice="랜덤" id = "무작위">❓</button>
+        <button class="btn primary" id="start">시작</button>
+        <button class="btn" id="reset">리셋</button>
+      </div>
+      
+    </div>
+
+    <div class="result">
+      <div class="msg" id="msg">선택 후 “시작”을 누르세요.</div>
+      <div class="scores">
+        <span>나: <b id="s1">0</b></span>
+        <span>컴A: <b id="s2">0</b></span>
+        <span>컴B: <b id="s3">0</b></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
