@@ -1,69 +1,41 @@
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Do+Hyeon&display=swap" rel="stylesheet">
-
-
 <head>
-  <title>test page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James의 페이지</title>
   <link rel='stylesheet' href="style.css" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Do+Hyeon&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="page">
-<div class="box">
-  <h1 class="main-title">james의 페이지에 오신걸 환영합니다!</h1>
-  <h4>ddabcdefghijklmnopqrstuvwxyz</h4>
-</div>
+    <div class="container">
+      <!-- 왼쪽 박스: 제목 + 학력/수상 -->
+      <div class="left-box">
+        <h1 class="main-title">James</h1>
+        
+        <div class="info-section">
+          <h3 class="main-subject">학력</h3>
+          <p class="content">안말초등학교 졸업</p>
+          <p class="content">송림중학교 졸업</p>
+          <p class="content">송림고등학교 졸업</p>
+          <p class="content">고려대학교 재학</p>
+        </div>
+        
+        <div class="info-section">
+          <h3 class="main-subject">수상</h3>
+          <p class="content">문무태권도 바른어린이상</p>
+          <p class="content">물로켓 멀리쏘기 최우수상</p>
+          <p class="content">3학년 3반 병두껑 멀리 날리기 대표 학생</p>
+        </div>
+      </div>
 
-<div class="box2">
-  <div class="section">
-    <h3 class="main-subject">학력</h3>
-    <p class="content">안말초등학교 졸업</p>
-    <p class="content">송림중학교 졸업</p>
-    <p class="content">송림고등학교 졸업</p>
-    <p class="content">고려대학교 재학</p>
+      <!-- 오른쪽 박스: 사진 -->
+      <div class="right-box">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=600&fit=crop" alt="해커 이미지" class="profile-image">
+      </div>
+    </div>
   </div>
-  
-  <div class="section">
-    <h3 class="main-subject">수상</h3>
-    <p class="content">문무태권도 바른어린이상</p>
-    <p class="content">물로켓 멀리쏘기 최우수상</p>
-    <p class="content">3학년 3반 병두껑 멀리 날리기 대표 학생</p>
-  </div>
-</div>
-
-<!-- 간단 곱셈 계산기 -->
-<div class="card calc">
-  <h2 style="font-size: 20px;">간단 곱셈 계산기</h2>
-  <div class="calc-row">
-    <input id="num1" type="number" placeholder="숫자 1 입력" />
-    <span class="x-sign">×</span>
-    <input id="num2" type="number" placeholder="숫자 2 입력" />
-    <button id="calc-btn" type="button">계산</button>
-  </div>
-  <div id="calc-result">결과: —</div>
-</div>
-
-
-
-<button class="btn">button</button>
-</div>
 </body>
-
-
-<script>
-  $('.btn').on('click', function() {
-  alert("그냥 만든 버튼")
-  })
-</script>
-
-<script>
-  $('#calc-btn').on('click', function() {
-    const num1 = Number($('#num1').val());
-    const num2 = Number($('#num2').val());
-    const result = num1 * num2;
-    $('#calc-result').text('결과: ' + result);
-  });
-</script>
