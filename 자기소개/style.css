@@ -180,3 +180,79 @@ body {
     max-width: 300px;
   }
 }
+
+/* Details 페이지 스타일 */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 12px 24px;
+  background: #0f3460;
+  color: #64b5f6;
+  border: 2px solid #64b5f6;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Do Hyeon', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #64b5f6;
+  color: #0f3460;
+}
+
+.details-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: var(--dark-card);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-section {
+  margin-bottom: 50px;
+}
+
+.details-section h2 {
+  font-size: 32px;
+  color: #64b5f6;
+  border-bottom: 3px solid #64b5f6;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.details-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-section li {
+  font-size: 18px;
+  color: var(--text-light);
+  padding: 12px 0;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.8;
+}
+
+.details-section li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #64b5f6;
+  font-weight: bold;
+}
