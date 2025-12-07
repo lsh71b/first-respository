@@ -12,24 +12,35 @@
 <body>
   <div class="page">
     <div class="container">
-      <!-- 왼쪽 박스: 제목 + 학력/수상 -->
+      <!-- 왼쪽 박스: 제목 + 학력 -->
       <div class="left-box">
-        <h1 class="main-title">James</h1>
+        <h1 class="main-title">
+          <span class="typing-char">이</span><span class="typing-char">상</span><span class="typing-char">화</span>
+        </h1>
+        
+        <p class="intro-text">
+          <span class="typing-char">왕</span><span class="typing-char">관</span><span class="typing-char">을</span><span class="typing-char"> </span><span class="typing-char">쓰</span><span class="typing-char">려</span><span class="typing-char">는</span><span class="typing-char"> </span><span class="typing-char">자</span><span class="typing-char">,</span><span class="typing-char"> </span><span class="typing-char">그</span><span class="typing-char"> </span><span class="typing-char">무</span><span class="typing-char">게</span><span class="typing-char">를</span><span class="typing-char"> </span><span class="typing-char">견</span><span class="typing-char">뎌</span><span class="typing-char">라</span><span class="typing-char">.</span><br><span class="typing-char">안</span><span class="typing-char">암</span><span class="typing-char">의</span><span class="typing-char"> </span><span class="typing-char">아</span><span class="typing-char">들</span><span class="typing-char"> </span><span class="typing-char">이</span><span class="typing-char">상</span><span class="typing-char">화</span><span class="typing-char">입</span><span class="typing-char">니</span><span class="typing-char">다</span>
+        </p>
         
         <div class="info-section">
-          <h3 class="main-subject">학력</h3>
-          <p class="content">안말초등학교 졸업</p>
-          <p class="content">송림중학교 졸업</p>
-          <p class="content">송림고등학교 졸업</p>
-          <p class="content">고려대학교 재학</p>
+          <h3 class="main-subject">
+            <span class="typing-char">학</span><span class="typing-char">력</span>
+          </h3>
+          <p class="content">
+            <span class="typing-char">안</span><span class="typing-char">말</span><span class="typing-char">초</span><span class="typing-char">등</span><span class="typing-char">학</span><span class="typing-char">교</span><span class="typing-char"> </span><span class="typing-char">졸</span><span class="typing-char">업</span>
+          </p>
+          <p class="content">
+            <span class="typing-char">송</span><span class="typing-char">림</span><span class="typing-char">중</span><span class="typing-char">학</span><span class="typing-char">교</span><span class="typing-char"> </span><span class="typing-char">졸</span><span class="typing-char">업</span>
+          </p>
+          <p class="content">
+            <span class="typing-char">송</span><span class="typing-char">림</span><span class="typing-char">고</span><span class="typing-char">등</span><span class="typing-char">학</span><span class="typing-char">교</span><span class="typing-char"> </span><span class="typing-char">졸</span><span class="typing-char">업</span>
+          </p>
+          <p class="content">
+            <span class="typing-char">고</span><span class="typing-char">려</span><span class="typing-char">대</span><span class="typing-char">학</span><span class="typing-char">교</span><span class="typing-char"> </span><span class="typing-char">재</span><span class="typing-char">학</span>
+          </p>
         </div>
-        
-        <div class="info-section">
-          <h3 class="main-subject">수상</h3>
-          <p class="content">문무태권도 바른어린이상</p>
-          <p class="content">물로켓 멀리쏘기 최우수상</p>
-          <p class="content">3학년 3반 병두껑 멀리 날리기 대표 학생</p>
-        </div>
+
+        <a href="details.html" class="more-btn">더 보기</a>
       </div>
 
       <!-- 오른쪽 박스: 사진 -->
@@ -39,3 +50,50 @@
     </div>
   </div>
 </body>
+
+<script>
+  // 타이핑 애니메이션 - 각 글자가 랜덤한 시간(1~5초) 동안 변환
+  const chars = document.querySelectorAll('.typing-char');
+  
+  // 한글 자음과 모음
+  const consonants = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
+  const vowels = ['ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ', 'ㅜ', 'ㅠ', 'ㅝ', 'ㅞ', 'ㅢ', 'ㅤ', 'ㅥ', 'ㅦ'];
+
+  // 랜덤 한글 조합 생성
+  const generateRandomKorean = () => {
+    const types = [
+      () => consonants[Math.floor(Math.random() * consonants.length)] + vowels[Math.floor(Math.random() * vowels.length)], // 자+모
+      () => vowels[Math.floor(Math.random() * vowels.length)] + consonants[Math.floor(Math.random() * consonants.length)], // 모+자
+      () => consonants[Math.floor(Math.random() * consonants.length)], // 자만
+      () => vowels[Math.floor(Math.random() * vowels.length)] // 모만
+    ];
+    const randomType = Math.floor(Math.random() * types.length);
+    return types[randomType]();
+  };
+
+  // 모든 글자의 최종 값 저장
+  const targetChars = Array.from(chars).map(char => char.textContent);
+
+  chars.forEach((char, index) => {
+    // 각 글자마다 랜덤한 지속 시간 (1000~3000ms)
+    const duration = Math.random() * 2000 + 1000;
+    const startTime = Date.now();
+    const updateInterval = Math.random() * 200 + 100; // 100~300ms 사이의 랜덤 간격
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      if (progress < 1) {
+        // 진행 중: 랜덤 한글 조합으로 표시
+        char.textContent = generateRandomKorean();
+        setTimeout(animate, updateInterval);
+      } else {
+        // 완료: 최종 글자로 표시
+        char.textContent = targetChars[index];
+      }
+    };
+
+    animate();
+  });
+</script>
